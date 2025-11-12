@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>华倚莹专属奶茶抽奖 🧋</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #e6f2ff);
+      font-family: "Microsoft YaHei", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 90%;
+      width: 350px;
+      position: relative;
+    }
+    h1 {
+      color: #ff6f91;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #9c74a6;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .photo {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: #ff9ec7;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background-color: #ff6f91;
+      transform: scale(1.05);
+    }
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #ff4d8d;
+      min-height: 30px;
+      animation: fadeIn 1s;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .emoji {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💖 华倚莹专属奶茶抽奖 💖</h1>
+    <p class="subtitle">“每次喝奶茶，都像在和你一起”</p>
+    
+    <!-- 插入你们的照片 -->
+    <!-- <img src="photo.jpg" alt="和华倚莹一起喝奶茶" class="photo" /> -->
+    <h1>💖 和小宝一起喝奶茶！ 💖</h1>
+    <button class="btn" onclick="drawPrize()">🎁 抽一杯奶茶 🎁</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function drawPrize() {
+      // 可爱又甜蜜的奶茶列表
+      const prizes = [
+        "珍珠奶茶",
+        "芋圆波波奶茶",
+        "抹茶拿铁",
+        "草莓奶昔",
+        "焦糖玛奇朵",
+        "奥利奥奶茶",
+        "杨枝甘露",
+        "芝士奶盖绿茶",
+        "红豆奶茶",
+        "椰香奶茶",
+        "玫瑰花茶拿铁",
+        "巧克力摩卡"
+      ];
+      
+      const randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
+      const resultText = `🎉 恭喜你，华倚莹！\n今天请你喝：${randomPrize}！\n✨ 希望你每天都像喝奶茶一样幸福～`;
+      document.getElementById("result").innerText = resultText;
+    }
+  </script>
+</body>
+</html>
